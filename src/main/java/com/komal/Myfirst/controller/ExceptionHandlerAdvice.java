@@ -14,7 +14,7 @@ import org.springframework.web.context.request.WebRequest;
 @ControllerAdvice
 public class ExceptionHandlerAdvice {
 	@ExceptionHandler(HttpClientErrorException.class)
-    public ResponseEntity<Object> handleCityNotFoundException(
+    public ResponseEntity<Object> handleHttpClientErrorException(
     		HttpClientErrorException ex, WebRequest request) {
 
         Map<String, Object> body = new LinkedHashMap<String, Object>();
@@ -23,4 +23,6 @@ public class ExceptionHandlerAdvice {
 
         return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
     }
+	
+	
 }
