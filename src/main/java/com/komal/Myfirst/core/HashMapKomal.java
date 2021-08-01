@@ -18,7 +18,6 @@ public class HashMapKomal {
 	TestRepos testr;
 	public int get(int key) 
 	{
-		if(key!=-1) throw new HttpClientErrorException(HttpStatus.BAD_REQUEST);
 		return 1;
 	}
 	public void put(int a,int b)
